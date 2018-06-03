@@ -1,0 +1,31 @@
+<div class="form2">
+  Калькулятор
+</div>
+<br />
+<div class="form">
+
+  <operand
+  [operandTitle]="titleOfOperand1"
+  (changeValue)="getFirstNumberAdd($event)"
+  (changeValue)="getFirstNumberSub($event)"
+  (changeValue)="getFirstNumberMul($event)"
+  (changeValue)="getFirstNumberDiv($event)"></operand>
+
+  <strong></strong>
+
+  <operand
+  [operandTitle]="titleOfOperand2"
+  (changeValue)="getSecondNumberAdd($event)"
+  (changeValue)="getSecondNumberSub($event)"
+  (changeValue)="getSecondNumberMul($event)"
+  (changeValue)="getSecondNumberDiv($event)"></operand><br>
+<p>
+  <button (click)="onBtnClickAdd()"> add + </button>
+  <button (click)="onBtnClickSub()"> sub - </button>
+  <button (click)="onBtnClickMul()"> mul * </button>
+  <button (click)="onBtnClickDiv()"> div / </button>
+</p>
+
+
+  <result [amount]= "result"> </result>
+</div>
